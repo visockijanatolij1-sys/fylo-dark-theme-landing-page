@@ -352,6 +352,7 @@
 
 .testimonails{
     margin-top: 160px;
+    padding-bottom: 350px;
 }
 .testimonails-body{
     padding-top: 50px;
@@ -361,9 +362,24 @@
     align-items: center;
     gap: 40px;
     position: relative;
+    z-index: 5;
     max-width: 1160px;
     margin: 0 auto;
+    &::before{
+        content: "";
+        width: 100px;
+        height: 140px;
+        position: absolute;
+        top: -46px;
+        left: -33px;
+        background-image: url("../images/bg-quotes.png");
+        background-position: top left;
+        background-size: contain;
+        background-repeat: no-repeat;
+        z-index: -1;
+    }
 }
+
 .testimonails-column{
     flex: 0 1 360px;
     min-height: 200px;
@@ -445,4 +461,153 @@
         padding: 24px;
         gap: 16px;
     }
+}
+
+// ================================================
+
+.access{
+    position: relative;
+    top: -150px;
+}
+.access-body{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 863px;
+    min-height: 300px;
+    margin: 0 auto;
+    padding: 48px 80px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 32px;
+    background-color: variables.$navy850;
+    border-radius: 5px;
+}
+.access-content{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 8px;
+}
+.content-access_title{
+    font-size: 40px;
+    font-family: "Raleway", sans-serif;
+    line-height: 120%;
+    letter-spacing: 0px;
+    font-weight: 700;
+}
+.content-access_text{
+    font-size: 14px;
+    line-height: 150%;
+    letter-spacing: 0px;
+}
+.form-access{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.f-access{
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+.form-access_input{
+    width: 480px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 32px;
+    border-radius: 30px;
+    &::placeholder{
+        font-size: 142px;
+        line-height: 150%;
+        letter-spacing: 0px;
+        color: variables.$navy950;
+    }
+}
+.form-access_button{
+    width: 200px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: variables.$blue300;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 120%;
+    font-family: "Raleway", sans-serif;
+    letter-spacing: 0px;
+    color: variables.$white;
+    font-weight: 700;
+    &:focus{
+        opacity: 0.7;
+    }
+}
+.form-access_error{
+    padding-left: 30px;
+    color: variables.$red500;
+    font-size: 10px;
+    line-height: 180%;
+    letter-spacing: 0.5px;
+    display: none;
+}
+
+@media (max-width:890px) {
+    .form-access_input{
+        width: 370px;
+    }
+}
+
+@media (max-width:767.98px) {
+    .testimonails{
+        padding-bottom: 285px;
+    }
+    .access{
+        top: -210px;
+    }
+    .access-body{
+        min-height: 353px;
+        padding: 48px 40px;
+    }
+    .f-access{
+        flex-direction: column;
+        gap: 16px;
+    }
+    .form-access_input{
+        width: 400px;
+        padding-top: 13px;
+        padding-bottom: 13px;
+        padding-left: 32px;
+    }
+    .form-access_button{
+        width: 400px;
+    }
+    .access-content{
+        gap: 24px;
+    }
+    .content-access_title{
+        font-size: 20px;
+    }
+    .content-access_text{
+        font-size: 14px;
+    }
+
+}
+
+@media (max-width: 500px) {
+    .form-access_input{
+        width: 250px;
+    }
+    .form-access_button{
+        width: 250px;
+    }
+}
+
+// ====================
+.footer{
+    width: 100%;
+    min-height: 800px;
+    background-color: variables.$navy950;
 }
