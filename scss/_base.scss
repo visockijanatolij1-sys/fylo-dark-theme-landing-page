@@ -25,3 +25,19 @@ a{
     text-decoration: none;
 }
 
+.menu-link,
+.content-stay_link,
+.footer-menu_link {
+    &:focus-visible {
+        outline: 2px solid variables.$blue300;
+        outline-offset: 4px;
+    }
+}
+
+.hero-button,
+.form-access_button {
+    &:focus-visible {
+        outline: 2px solid variables.$white;
+        outline-offset: 4px;
+    }
+}

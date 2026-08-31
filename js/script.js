@@ -6,12 +6,14 @@ function isValidEmail(email) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
-function showError(){
+function showError() {
     errorError.style.display = "block";
+    input.setAttribute("aria-invalid", "true");
 }
 
-function hideError(){
+function hideError() {
     errorError.style.display = "none";
+    input.removeAttribute("aria-invalid");
 }
 
 form.addEventListener("submit", function(event) {
@@ -29,6 +31,6 @@ form.addEventListener("submit", function(event) {
     }
     else{
         hideError();
-        email.value = "";
+        input.value = "";
     }
 })
